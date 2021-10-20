@@ -1,10 +1,2 @@
 [build]
   functions = "functions/"
-
-[[plugins]]
-package = "netlify-build-plugin-pushover"
-
-  [plugins.inputs]
-    successMessage = "Yeah! :-)" #Optional
-    errorMessage = "Oh,no :-(" #Optional
-  
