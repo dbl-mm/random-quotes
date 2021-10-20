@@ -3,13 +3,13 @@ import './App.css';
 
 function App() {
   const url = '/.netlify/functions/quotes';
-  const [quote, setQuote] = useState();
+  const [text, setQuote] = useState();
 
   useEffect(() => {
     const getQuote = async () => {
       const response = await fetch(url);
       const data = await response.json();
-      setQuote(data.quote);
+      setQuote(data.text);
       return data;
     }
     getQuote();
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          {quote}
+          {text}
         </p>
       </header>
     </div>

@@ -2,17 +2,24 @@
 exports.handler = async (event, context) => {
 
   const quotes = [
-    {"quote": "You gotta be kidding me?"},
-    {"quote": "Will you be my neighbor?"},
-    {"quote": "Liz is awesome!"}
-  ]; 
+    {
+      "text": "You gotta be kidding me?",
+      "author": "mini musl"
+    },
+    {
+      "text": "Will you be my neighbor?",
+      "author": "maxi musl"
+    },
+    { "text": "Liz is awesome!",
+      "author": "maxi shiy" }
+  ];
 
   const number = Math.floor(Math.random() * quotes.length);
-  const quote = quotes[number];
+  const text = quotes[number];
 
-   return {
-     statusCode: 200,
-     body: JSON.stringify(quote)
-   };
+  return {
+    statusCode: 200,
+    body: JSON.stringify(text)
+  };
 
 };
